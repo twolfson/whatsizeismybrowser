@@ -1,3 +1,13 @@
-body {
-  background: blue;
+.width:before {
+  content: "?";
+}
+
+.height:before {
+  content: "?";
+}
+
+@media (min-height: 1px) and (max-height: 9001px) {
+  .height:before {
+    content: "!!";
+  }
 }
