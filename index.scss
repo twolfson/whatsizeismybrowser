@@ -6,9 +6,10 @@
   content: "?";
 }
 
-for num in 0px..9000px
-  @media (height: {num}) {
+@for $num from 0 through 9999 {
+  @media (height: #{$num}px) {
     .height:before {
-      content: num;
+      content: "#{$num}";
     }
   }
+}
