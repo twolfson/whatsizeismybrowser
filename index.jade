@@ -13,18 +13,20 @@ html
     meta(name="viewport",content="width=device-width")
     link(rel="stylesheet",type="text/css",href="index.css")
 
-    // DEV: Watch files for changes
-    script(src="https://raw.github.com/twolfson/File-Watcher/master/src/watcher.js")
-    script(src="https://raw.github.com/twolfson/Resource-Collector/master/src/collector.js")
-    script
-        (function () {
-           var watcher = new FileWatcher(),
-               resources = ResourceCollector.collect();
-           watcher.addListener(function () {
-             location.reload();
-           });
-           watcher.watch(resources);
-        }());
+    if (config.env === 'development')
+      // DEV: Watch files for changes
+      script(src="https://raw.github.com/twolfson/File-Watcher/master/src/watcher.js")
+      script(src="https://raw.github.com/twolfson/Resource-Collector/master/src/collector.js")
+      script
+          (function () {
+             var watcher = new FileWatcher(),
+                 resources = ResourceCollector.collect();
+             watcher.addListener(function () {
+               location.reload();
+             });
+             watcher.watch(resources);
+          }());
+
   body
     .container
       span.w px
