@@ -32,9 +32,20 @@ module.exports = function(grunt) {
       // and SCSS was being too slow
       css: {
         src: 'index.ejs.css',
-        dest: 'index.css',
+        dest: 'index.tmp.css',
         engine: 'ejs',
         variables: {}
+      }
+    },
+
+    // Minify our CSS
+    recess: {
+      css: {
+        src: 'index.tmp.css',
+        dest: 'index.css',
+        options: {
+          compress: true
+        }
       }
     },
 
@@ -63,7 +74,10 @@ module.exports = function(grunt) {
   // Load in grunt-templater
   grunt.loadNpmTasks('grunt-templater');
 
+  // Load in grunt-recess
+  grunt.loadNpmTasks('grunt-recess');
+
   // Default task.
-  grunt.registerTask('default', 'lint template');
+  grunt.registerTask('default', 'lint template recess');
 
 };

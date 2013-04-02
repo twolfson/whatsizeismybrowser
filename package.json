@@ -30,7 +30,8 @@
     "grunt": "~0.3.17",
     "grunt-templater": "0.0.4",
     "ejs": "~0.8.3",
-    "jade": "~0.28.2"
+    "jade": "~0.28.2",
+    "grunt-recess": "~0.1.4"
   },
   "keywords": [
     "browser",
