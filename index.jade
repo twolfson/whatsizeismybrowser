@@ -3,6 +3,17 @@ html
   head
     title "What size is my browser?"
     link(rel="stylesheet",type="text/css",href="index.css")
+    script(src="https://raw.github.com/twolfson/File-Watcher/master/src/watcher.js")
+    script(src="https://raw.github.com/twolfson/Resource-Collector/master/src/collector.js")
+    script
+        (function () {
+           var watcher = new FileWatcher(),
+               resources = ResourceCollector.collect();
+           watcher.addListener(function () {
+             location.reload();
+           });
+           watcher.watch(resources);
+        }());
   body
     .container
       span.width ?px
