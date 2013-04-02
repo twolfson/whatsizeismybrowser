@@ -1,22 +1,14 @@
-.width:before {
-  content: "?";
-}
-
-.height:before {
-  content: "?";
-}
-
-@for $num from 0 through 9999 {
-  @media (height: #{$num}px) {
-    .height:before {
+@for $num from 1 through 9999 {
+  @media (width: #{$num}px) {
+    .w:before {
       content: "#{$num}";
     }
   }
 }
 
-@for $num from 0 through 9999 {
-  @media (width: #{$num}px) {
-    .width:before {
+@for $num from 1 through 9999 {
+  @media (height: #{$num}px) {
+    .h:before {
       content: "#{$num}";
     }
   }
