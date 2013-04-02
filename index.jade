@@ -39,6 +39,13 @@ html
         ga('create', 'UA-39787166-1');
         ga('send', 'pageview');
 
+    //- Nice touch for developers
+    script
+      if (window.console) {
+        console.log('If you are looking for the source, it is all minified (except for this).')
+        console.log('You are better off reading the original at http://github.com/twolfson/whatsizeismybrowser');
+      }
+
   body
     .container
       span.w px
@@ -47,10 +54,10 @@ html
 
     p <strong>Fun fact</strong>: This hands out <strong>printer dimensions</strong> in a print preview.
 
-    // DEV: I wanted to initially do some modulo combination but that is not possible
-    // and doing things on a per-digit basis winds up forcing 9999 for the ones case alone.
-    // The tens is 999 (e.g. min-height: 10px and max-height: 20px). As a result, it is just silly.
+    //- DEV: I wanted to initially do some modulo combination but that is not possible
+    //- and doing things on a per-digit basis winds up forcing 9999 for the ones case alone.
+    //- The tens is 999 (e.g. min-height: 10px and max-height: 20px). As a result, it is just silly.
 
     // TODO: Can we short circuit the cascade via nested media queries? (e.g. @media (min-width: 1px) { content: "1"; @media (min-width: 2px) { content: "2"; } })
-    // TODO: Add _gaq
+    // TODO: Test out Google Analytics
     // TODO: Add 'Fork me on GitHub ribbon'
