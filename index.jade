@@ -13,6 +13,7 @@ html
     meta(name="viewport",content="width=device-width")
     link(rel="stylesheet",type="text/css",href="index.css")
 
+    //- If we are in development
     if (config.env === 'development')
       // DEV: Watch files for changes
       script(src="https://raw.github.com/twolfson/File-Watcher/master/src/watcher.js")
@@ -26,6 +27,17 @@ html
              });
              watcher.watch(resources);
           }());
+    else
+      //- Otherwise, if we are in production
+      script
+        //- Load in Google Analytics and record a pageview
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-39787166-1');
+        ga('send', 'pageview');
 
   body
     .container
