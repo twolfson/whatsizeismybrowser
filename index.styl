@@ -6,8 +6,9 @@
   content: "?";
 }
 
-@media (min-height: 1px) and (max-height: 9001px) {
-  .height:before {
-    content: "!!";
+for num in 0px..9000px
+  @media (height: {num}) {
+    .height:before {
+      content: num;
+    }
   }
-}
