@@ -13,3 +13,11 @@
     }
   }
 }
+
+@for $num from 0 through 9999 {
+  @media (width: #{$num}px) {
+    .width:before {
+      content: "#{$num}";
+    }
+  }
+}
