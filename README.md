@@ -8,16 +8,16 @@ This idea struck me as a combination of two concepts I had seen before; [a webpa
 
 I jotted this down and decided to act on it. I present to you, [What size is my browser?][gh-pages]
 
-[page-dimensions]:
-[stealing-the-pie]:
-[gh-pages]:
+[page-dimensions]: http://matanich.com/test/viewport-width/
+[stealing-the-pie]: http://www.slideshare.net/x00mario/stealing-the-pie
+[gh-pages]: http://twolfson.github.com/whatsizeismybrowser/
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint your code using [grunt][grunt] and test via `npm test`.
 
 [grunt]: https://github.com/gruntjs/grunt/tree/0.3-stable
 
-TODO: Write tests on mocha -- driven by phantom
+TODO: Write tests on testling for true cross-browser
 
 ## License
 Copyright (c) 2013 Todd Wolfson

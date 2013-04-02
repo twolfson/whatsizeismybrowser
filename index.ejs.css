@@ -1,0 +1,26 @@
+<%
+  // Specify our variable to loop over
+  var i;
+
+  // Define all width media queries
+  for (i = 1; i < 9999; i++) {
+%>
+@media (width: <%=i%>px) {
+  .w:before {
+    content: "<%=i%>";
+  }
+}
+<%
+  }
+
+  // Define all height media queries
+  for (i = 1; i < 9999; i++) {
+%>
+@media (height: <%=i%>px) {
+  .h:before {
+    content: "<%=i%>";
+  }
+}
+<%
+  }
+%>
