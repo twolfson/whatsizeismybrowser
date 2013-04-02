@@ -38,14 +38,15 @@ module.exports = function(grunt) {
       }
     },
 
-    // Minify our CSS
-    recess: {
+    // Strip out all whitespace
+    replace: {
       css: {
         src: 'index.tmp.css',
         dest: 'index.css',
-        options: {
-          compress: true
-        }
+        replacements: [{
+          from: /\s+/g,
+          to: ''
+        }]
       }
     },
 
@@ -74,10 +75,10 @@ module.exports = function(grunt) {
   // Load in grunt-templater
   grunt.loadNpmTasks('grunt-templater');
 
-  // Load in grunt-recess
-  grunt.loadNpmTasks('grunt-recess');
+  // Load in grunt-text-replace
+  grunt.loadNpmTasks('grunt-text-replace');
 
   // Default task.
-  grunt.registerTask('default', 'lint template recess');
+  grunt.registerTask('default', 'lint template replace');
 
 };
