@@ -4,4 +4,12 @@
 
 .h:before {
   content: "?";
-}</style><meta name="viewport" content="width=device-width"><link rel="stylesheet" type="text/css" href="index.css"></head><body><div class="container"><span class="w">px</span><span class="times">&times;</span><span class="h">px</span></div><p>Now try a Print Preview. Can your JS do that? ;)</p><!-- TODO: During formalization, move off of SCSS and onto mustache or similar -- it will be much faster and simpler--><!-- DEV: I wanted to initially do some modulo combination but that is not possible--><!-- and doing things on a per-digit basis winds up forcing 9999 for the ones case alone.--><!-- The tens is 999 (e.g. min-height: 10px and max-height: 20px). As a result, it is just silly.--><!-- TODO: Can we short circuit the cascade via nested media queries? (e.g. @media (min-width: 1px) { content: "1"; @media (min-width: 2px) { content: "2"; } })--></body></html>
+}</style><meta name="viewport" content="width=device-width"><link rel="stylesheet" type="text/css" href="index.css"><!-- DEV: Watch files for changes--><script src="https://raw.github.com/twolfson/File-Watcher/master/src/watcher.js"></script><script src="https://raw.github.com/twolfson/Resource-Collector/master/src/collector.js"></script><script>(function () {
+   var watcher = new FileWatcher(),
+       resources = ResourceCollector.collect();
+   watcher.addListener(function () {
+     location.reload();
+   });
+   watcher.watch(resources);
+}());
+</script></head><body><div class="container"><span class="w">px</span><span class="times">&times;</span><span class="h">px</span></div><p><strong>Fun fact</strong>: This hands out <strong>printer dimensions</strong> in a print preview.</p><!-- DEV: I wanted to initially do some modulo combination but that is not possible--><!-- and doing things on a per-digit basis winds up forcing 9999 for the ones case alone.--><!-- The tens is 999 (e.g. min-height: 10px and max-height: 20px). As a result, it is just silly.--><!-- TODO: Can we short circuit the cascade via nested media queries? (e.g. @media (min-width: 1px) { content: "1"; @media (min-width: 2px) { content: "2"; } })--><!-- TODO: Add _gaq--><!-- TODO: Add 'Fork me on GitHub ribbon'--></body></html>

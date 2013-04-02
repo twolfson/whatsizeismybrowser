@@ -1,11 +1,12 @@
 module.exports = function(grunt) {
 
   // Set up template variables
-  var variables = {
-    config: {
-      env: 'production'
-    }
-  };
+  var config = {
+        env: 'production'
+      },
+      variables = {
+        config: config
+      };
 
   // Project configuration.
   grunt.initConfig({
@@ -14,8 +15,8 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      files: '<config:lint.files>',
-      tasks: 'default'
+      files: '**/*',
+      tasks: 'build'
     },
 
     template: {
@@ -78,7 +79,18 @@ module.exports = function(grunt) {
   // Load in grunt-text-replace
   grunt.loadNpmTasks('grunt-text-replace');
 
+  // Create a build task
+  grunt.registerTask('build', 'template replace');
+
+  // Register a dev-config task
+  grunt.registerTask('dev-config', 'Configure the environment to be development', function () {
+    config.env = 'development';
+  });
+
+  // Create a dev task
+  grunt.registerTask('dev', 'dev-config build watch');
+
   // Default task.
-  grunt.registerTask('default', 'lint template replace');
+  grunt.registerTask('default', 'lint build');
 
 };

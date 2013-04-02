@@ -33,9 +33,12 @@ html
       span.times &times;
       span.h px
 
-    p Now try a Print Preview. Can your JS do that? ;)
-    // TODO: During formalization, move off of SCSS and onto mustache or similar -- it will be much faster and simpler
+    p <strong>Fun fact</strong>: This hands out <strong>printer dimensions</strong> in a print preview.
+
     // DEV: I wanted to initially do some modulo combination but that is not possible
     // and doing things on a per-digit basis winds up forcing 9999 for the ones case alone.
     // The tens is 999 (e.g. min-height: 10px and max-height: 20px). As a result, it is just silly.
+
     // TODO: Can we short circuit the cascade via nested media queries? (e.g. @media (min-width: 1px) { content: "1"; @media (min-width: 2px) { content: "2"; } })
+    // TODO: Add _gaq
+    // TODO: Add 'Fork me on GitHub ribbon'
