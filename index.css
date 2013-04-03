@@ -144,12 +144,17 @@ body {
   text-align: center;
 }
 
+/* Remove normal h1 styles from header */
+.header {
+  font-weight: normal;
+  margin: 0;
+}
+
 /* Header and values are larger than normal text */
 .header,
 .value {
   font-size: 40px; /* 16px * 2.5 */
   line-height: 64px; /* 16px * 4 */
-  font-weight: normal;
 }
 
 /* Times is slightly larger than normal text */
