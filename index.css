@@ -12,9 +12,9 @@
   border: 0;
 }
 
-/* Content width is 960px by default */
+/* Content width is 600px by default */
 .container {
-  width: 960px;
+  width: 600px;
   margin: 0 auto;
   text-align: center;
 }
@@ -87,6 +87,17 @@
     word-spacing: -0.43em; /* 2 */
 }
 
+/**
+* Modifier: horizontally center all grid units
+* Allows for automatic unit centering irrespective of the number of
+* units in the grid.
+*/
+
+.grid--center {
+    text-align: center;
+}
+
+
 /* Grid cell
    ========================================================================== */
 
@@ -114,7 +125,12 @@
     text-rendering: auto; /* 4 */
 }
 
+
 /* Small parts from https://github.com/necolas/suit-utils-dimension/ */
 .size1of3 {
     width: 33.333%;
+}
+
+.size1of6 {
+    width: 16.667%;
 }
