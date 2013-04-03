@@ -104,6 +104,7 @@ html {
 
   /* Font size starts at 16px and uses modular scale towards 40px -- http://modularscale.com/scale/?px1=16&px2=40&ra1=1.5&ra2=0 */
   font-size: 16px;
+  line-height: 24px;
 }
 
 html,
@@ -141,12 +142,19 @@ body {
 /* Header and values are larger than normal text */
 .header,
 .value {
-  font-size: 2.5em;
+  font-size: 40px; /* 16px * 2.5 */
+  line-height: 60px; /* 40px * 1.5 */
 }
 
 /* Times is slightly larger than normal text */
 .times {
-  font-size: 1.667em;
+  font-size: 26.667px; /* 16px * 1.667 */
+  line-height: 60px; /* Same as .value */
+}
+
+/* Adjust margin of p's for more vertical padding */
+p {
+  margin: 1.5em 0;
 }
 
 /*** grid.css from https://github.com/necolas/suit-grid ***/
