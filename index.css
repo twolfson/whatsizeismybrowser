@@ -98,6 +98,12 @@ img {
 
 /*** Page styles ***/
 
+/* Fonts are modern, informative, descriptive, simple */
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  /* Noto Sans, Merriweather, Molengo, Average Sans, Metrophobic */
+}
+
 /* Default content if there is no media query support */
 .w:before,
 .h:before {
