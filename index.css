@@ -109,8 +109,10 @@ body {
   height: 100%;
 }
 
+/* Background is subtle, metric */
 body {
   background: blue;
+  /* light sketch, old mathematics, subtle dots, tiny grid, subtle net */
 }
 
 /* Default content if there is no media query support */
