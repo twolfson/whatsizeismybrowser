@@ -109,10 +109,17 @@ body {
   height: 100%;
 }
 
-/* Background is subtle, metric */
+/* Background is subtle, metric, almost invisible */
 body {
-  background: blue;
-  /* light sketch, old mathematics, subtle dots, tiny grid, subtle net */
+  /* light sketch [? -- not really metric] */
+  background: url("http://subtlepatterns.com/patterns/furley_bg.png") repeat scroll 0 0 transparent;
+  /* old mathematics [x -- too visible] */
+  /* tiny grid [? -- a little bit too visible?] */
+  background: url("http://subtlepatterns.com/patterns/tiny_grid.png") repeat scroll 0 0 transparent;
+  /* subtle dots [o -- a nice middleground] */
+  background: url("http://subtlepatterns.com/patterns/subtle_dots.png") repeat scroll 0 0 transparent;
+  /* subtle net [x - too visible] */
+  background: url("http://subtlepatterns.com/patterns/subtlenet2.png") repeat scroll 0 0 transparent;
 }
 
 /* Default content if there is no media query support */
