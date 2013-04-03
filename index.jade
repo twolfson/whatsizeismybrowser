@@ -3,7 +3,11 @@ html
   head
     title What size is my browser?
     meta(name="viewport",content="width=device-width")
-    link(rel='stylesheet',type='text/css',href='//fonts.googleapis.com/css?family=Noto+Sans')
+    //- Add in some SEO
+    meta(name="description",content="What size is my browser? Determine the height and width of your web browser via media queries.")
+
+    //- Load in our custom font and app CSS
+    link(rel="stylesheet",type="text/css",href="//fonts.googleapis.com/css?family=Noto+Sans")
     link(rel="stylesheet",type="text/css",href="index.css")
     link(rel="stylesheet",type="text/css",href="app.css")
 
@@ -42,7 +46,7 @@ html
 
   body
     .container
-      .header Your browser is
+      h1.header Your browser is
       .dimensions.grid.grid-center.lead
         .width.grid-cell.size1of4
           .value

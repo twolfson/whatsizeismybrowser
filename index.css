@@ -149,6 +149,7 @@ body {
 .value {
   font-size: 40px; /* 16px * 2.5 */
   line-height: 64px; /* 16px * 4 */
+  font-weight: normal;
 }
 
 /* Times is slightly larger than normal text */
