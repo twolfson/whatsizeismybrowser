@@ -168,17 +168,43 @@ body {
   }
 }
 
-/* When we are on a smaller screen */
+/* When the grid begins to break down */
 @media (max-width: 600px) {
   /* Make the container fluid */
   .container {
     width: 100%;
   }
 
-  /* Break up the author and attribution */
+  /* Force a line break for now in credits */
   .attribution,
   .author {
     display: block;
+  }
+}
+
+/* When the font is getting too big */
+@media (max-width: 480px) {
+  /* Scale down the fonts */
+  .header,
+  .value {
+    font-size: 28.430px; /* 16px * 1.667 */
+    line-height: 48px; /* 16px * 2 */
+  }
+  .times {
+    font-size: 21.328px; /* 16px * 1.111 */
+    line-height: 48px; /* Same as .value */
+  }
+  .lead {
+    margin-bottom: 40px !important;
+  }
+}
+
+/* When the attribution is wrapping lines */
+@media (max-width: 400px) {
+  /* Remove forced line break */
+  .attribution,
+  .author {
+    display: inline;
   }
 }
 
