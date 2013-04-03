@@ -143,18 +143,18 @@ body {
 .header,
 .value {
   font-size: 40px; /* 16px * 2.5 */
-  line-height: 60px; /* 40px * 1.5 */
+  line-height: 64px; /* 16px * 4 */
 }
 
 /* Times is slightly larger than normal text */
 .times {
   font-size: 26.667px; /* 16px * 1.667 */
-  line-height: 60px; /* Same as .value */
+  line-height: 64px; /* Same as .value */
 }
 
-/* Adjust margin of p's for more vertical padding */
-p {
-  margin: 1.5em 0;
+/* Push down fun fact and credits from content */
+.lead {
+  margin-bottom: 40px !important;
 }
 
 /*** grid.css from https://github.com/necolas/suit-grid ***/
