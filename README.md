@@ -10,7 +10,7 @@ I jotted this down and decided to act on it. I present to you, [What size is my 
 
 [page-dimensions]: http://matanich.com/test/viewport-width/
 [stealing-the-pie]: http://www.slideshare.net/x00mario/stealing-the-pie
-[gh-pages]: http://twolfson.github.com/whatsizeismybrowser/
+[gh-pages]: http://whatsizeismybrowser.com/
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint your code using [grunt][grunt] and test via `npm test`.
