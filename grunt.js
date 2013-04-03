@@ -51,6 +51,25 @@ module.exports = function(grunt) {
       }
     },
 
+    // Resource management
+    curl: {
+      'tmp/subtle_dots.zip': 'http://subtlepatterns.com/patterns/subtle_dots.zip'
+    },
+    unzip: {
+      background: {
+        src: 'tmp/subtle_dots.zip',
+        dest: '',
+        router: function (filepath) {
+          // Extract only subtle_dots.png
+          if (filepath === 'subtle_dots/subtle_dots.png') {
+            return 'subtle_dots.png';
+          } else {
+            return 'tmp/unzip/' + filepath;
+          }
+        }
+      }
+    },
+
     // Lint options
     jshint: {
       options: {
@@ -78,6 +97,13 @@ module.exports = function(grunt) {
 
   // Load in grunt-text-replace
   grunt.loadNpmTasks('grunt-text-replace');
+
+  // Load in grunt-curl and grunt-zip
+  grunt.loadNpmTasks('grunt-curl');
+  grunt.loadNpmTasks('grunt-zip');
+
+  // Create a resource task
+  grunt.registerTask('resources', 'curl unzip');
 
   // Create a build task
   grunt.registerTask('build', 'template replace');
