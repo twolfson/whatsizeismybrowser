@@ -1,6 +1,10 @@
 # What size is my browser?
 
-Determine the dimensions of your browser
+Determine the dimensions of your browser.
+
+Powered by **a lot** of [media queries][media-queries].
+
+[media-queries]: https://developer.mozilla.org/en-US/docs/CSS/Media_queries
 
 ## Synopsis
 
