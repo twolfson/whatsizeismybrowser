@@ -135,29 +135,6 @@ body {
 /* Hide github text by default */
 .github-text {
   display: none;
-
-  /* Set up github-text styling */
-  background: #F27500;
-  color: #FFF;
-  padding: 2px;
-  font-size: 12.669px;
-  font-weight: bold;
-
-  /* Faded orange stiching */
-  border-color: #C9AA8D;
-  border-style: dashed;
-  border-width: 1px 0;
-
-  /* Outer border */
-  outline-color: #F27500; /* Same as background */
-  outline-style: solid;
-  outline-width: 2px 0;
-  margin: 2px 0;
-}
-
-/* Remove any link styling */
-.github-text-link {
-  text-decoration: none;
 }
 
 /* Content width is 600px by default */
@@ -219,7 +196,7 @@ body {
 
   /* Show github-text */
   .github-text {
-    display: block;
+    display: inline;
   }
 }
 
