@@ -103,6 +103,16 @@ html {
   font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
 }
 
+/* Fully scale out the html and body */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: blue;
+}
+
 /* Default content if there is no media query support */
 .w:before,
 .h:before {
