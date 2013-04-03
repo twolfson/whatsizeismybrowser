@@ -43,18 +43,22 @@ html
     .container
       .header
         p Your browser is
-      .dimensions
-        .width
-          .row
+      .dimensions.grid
+        .width.grid-cell.size1of3
+          .value
             span.w px
-          .row (width)
-        .times &times;
-        .height
-          .row
+          .hint (width)
+        .times.grid-cell.size1of3 &times;
+        .height.grid-cell.size1of3
+          .value
             span.h px
-          .row (height)
+          .hint (height)
 
       p <strong>Fun fact</strong>: This hands out <strong>printer dimensions</strong> in a print preview.
+
+      p
+      | Inspired by <a href="http://matanich.com/test/viewport-width/">viewportSize</a> and <a href="http://www.slideshare.net/x00mario/stealing-the-pie">Stealing the Pie</a>.
+      | Written by <a href="http://twolfson.com/projects">Todd Wolfson</a>.
 
     //- GitHub ribbon -- https://github.com/blog/273-github-ribbons
     a(href="//github.com/twolfson/whatsizeismybrowser")
@@ -75,3 +79,5 @@ html
     // TODO: Favicon me
     //- TODO: I would love a favicon that displays browser resolution
     //- TODO: Add testing (via testling/phantomjs/casperjs) -- something that will work
+    //- TODO: SEO terms
+    //- TODO: Determine magical font sizings
