@@ -111,7 +111,7 @@ body {
 
 /* Background is subtle, metric, almost invisible */
 body {
-  background: url("http://subtlepatterns.com/patterns/subtle_dots.png") repeat;
+  background: url('subtle_dots.png') repeat;
 }
 
 /* Default content if there is no media query support */
