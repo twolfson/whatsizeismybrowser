@@ -41,19 +41,42 @@ html
         // Record a pageview
         ga('send', 'pageview');
 
-        // When you resize the browser
-        // DEV: Media queries are supported in IE9+ as is addEventListener IE9+
-        // http://caniuse.com/#search=media and https://developer.mozilla.org/en-US/docs/DOM/EventTarget.addEventListener#Browser_compatibility
-        window.addEventListener('resize', function () {
-          console.log('resize occurred');
-        }, false);
-
     // Nice touch for developers
     script
       if (window.console) {
         console.log('If you are looking for the source, it is all minified (except for this).')
         console.log('You are better off reading the original at http://github.com/twolfson/whatsizeismybrowser');
       }
+
+      // When you resize the browser (DOM Level 0 is easiest)
+      var resizeStart,
+          resizeEnd,
+          resizeTimeout;
+      window.onresize = function () {
+        // If we are in the middle of a resize, clear the timeout
+        console.log(resizeTimeout);
+        if (resizeTimeout) {
+          clearTimeout(resizeTimeout);
+        } else {
+        // Otherwise, record the resizeStart
+          resizeStart = new Date();
+        }
+
+        // Record the last resize
+        resizeEnd = new Date();
+
+        // In 500ms, declare the resizing to be complete
+        resizeTimeout = setTimeout(function () {
+          // Calculate and record the time spent resizing
+          var resizeTime = resizeEnd - resizeStart;
+          console.log('Resize complete', resizeEnd, resizeStart, resizeTime);
+
+          // Nuke resizeStart, resizeEnd, and resizeTimeout
+          resizeStart = null;
+          resizeEnd = null;
+          resizeTimeout = null;
+        }, 500);
+      };
 
   body
     .container

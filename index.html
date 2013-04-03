@@ -9,4 +9,34 @@
   console.log('If you are looking for the source, it is all minified (except for this).')
   console.log('You are better off reading the original at http://github.com/twolfson/whatsizeismybrowser');
 }
+
+// When you resize the browser (DOM Level 0 is easiest)
+var resizeStart,
+    resizeEnd,
+    resizeTimeout;
+window.onresize = function () {
+  // If we are in the middle of a resize, clear the timeout
+  console.log(resizeTimeout);
+  if (resizeTimeout) {
+    clearTimeout(resizeTimeout);
+  } else {
+  // Otherwise, record the resizeStart
+    resizeStart = new Date();
+  }
+  
+  // Record the last resize
+  resizeEnd = new Date();
+  
+  // In 500ms, declare the resizing to be complete
+  resizeTimeout = setTimeout(function () {
+    // Calculate and record the time spent resizing
+    var resizeTime = resizeEnd - resizeStart;
+    console.log('Resize complete', resizeEnd, resizeStart, resizeTime);
+    
+    // Nuke resizeStart, resizeEnd, and resizeTimeout
+    resizeStart = null;
+    resizeEnd = null;
+    resizeTimeout = null;
+  }, 500);
+};
 </script></head><body><div class="container"><h1 class="header">Your browser is</h1><div class="dimensions grid grid-center lead"><div class="width grid-cell size1of4"><div class="value"><span class="w">px</span></div><div class="hint">(width)</div></div><div class="times grid-cell size1of5">&times;</div><div class="height grid-cell size1of4"><div class="value"><span class="h">px</span></div><div class="hint">(height)</div></div></div><p><strong>Fun fact</strong>: This hands out <strong>printer dimensions</strong> in a print preview.</p><p><span class="attribution">Inspired by <a href="http://matanich.com/test/viewport-width/">viewportSize</a> and <a href="http://www.slideshare.net/x00mario/stealing-the-pie">Stealing the Pie</a>.&nbsp;</span><span class="author">Written by <a href="http://twolfson.com/projects">Todd Wolfson</a>.</span></p><p class="github-text">Project available on&nbsp;<a href="//github.com/twolfson/whatsizeismybrowser">GitHub.</a></p></div><!-- GitHub ribbon -- https://github.com/blog/273-github-ribbons--><a href="//github.com/twolfson/whatsizeismybrowser"><img src="//s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" class="github-ribbon"></a></body></html>
