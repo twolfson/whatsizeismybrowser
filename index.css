@@ -101,7 +101,7 @@ img {
 /* Fonts are modern, informative, descriptive, simple */
 html {
   font-family: Helvetica, Arial, sans-serif;
-  /* Noto Sans [?], Merriweather [x -- inconsistent numbers], Molengo [x -- inconsistent numbers], Average Sans [?], Metrophobic [x -- distorts numbers too much] */
+  /* Noto Sans */
 }
 
 /* Default content if there is no media query support */
