@@ -7,6 +7,12 @@ html
       .h:before {
         content: "?";
       }
+      .github-ribbon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 0;
+      }
     meta(name="viewport",content="width=device-width")
     link(rel="stylesheet",type="text/css",href="index.css")
 
@@ -49,14 +55,18 @@ html
       span.times &times;
       span.h px
 
+    a(href="//github.com/twolfson/whatsizeismybrowser")
+      img.github-ribbon(src="//s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png", alt="Fork me on GitHub")
+
     p <strong>Fun fact</strong>: This hands out <strong>printer dimensions</strong> in a print preview.
 
     //- DEV: I wanted to initially do some modulo combination but that is not possible
     //- and doing things on a per-digit basis winds up forcing 9999 for the ones case alone.
     //- The tens is 999 (e.g. min-height: 10px and max-height: 20px). As a result, it is just silly.
 
-    // TODO: Can we short circuit the cascade via nested media queries? (e.g. @media (min-width: 1px) { content: "1"; @media (min-width: 2px) { content: "2"; } })
-    // TODO: Test out Google Analytics
+    //- TODO: Can we short circuit the cascade via nested media queries? (e.g. @media (min-width: 1px) { content: "1"; @media (min-width: 2px) { content: "2"; } })
+    //- TODO: Another perf test: Create 4000 digits for each (i.e. 0000 - 9999) and toggle each via `display: none;`. It might be faster than dynamic content (doubt it)
+    //- TODO: In this case, we are intended to chain them together
     // TODO: Add 'Fork me on GitHub ribbon'
     // TODO: Center the content
     // TODO: Choose a good looking font (modern, informative, descriptive, simple)
@@ -64,3 +74,4 @@ html
     // TODO: Can we half the size of index.css with `or` statements? (and is that performant?)
     // TODO: Can we half reduce the size of index.css with commas? (this will remove the `content: "1";` parts)
     // TODO: Favicon me
+    //- TODO: I would love a favicon that displays browser resolution
