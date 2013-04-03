@@ -98,19 +98,22 @@ img {
 
 /*** Page styles ***/
 
-/* Fonts are modern, informative, descriptive, simple */
 html {
+  /* Fonts are modern, informative, descriptive, simple */
   font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+
+  /* Font size starts at 16px and uses modular scale towards 40px -- http://modularscale.com/scale/?px1=16&px2=40&ra1=1.5&ra2=0 */
+  font-size: 16px;
 }
 
-/* Fully scale out the html and body */
 html,
 body {
+  /* Fully scale out the html and body */
   height: 100%;
 }
 
-/* Background is subtle, metric, almost invisible */
 body {
+  /* Background is subtle, metric, almost invisible */
   background: url('subtle_dots.png') repeat;
 }
 
@@ -138,12 +141,12 @@ body {
 /* Header and values are larger than normal text */
 .header,
 .value {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 /* Times is slightly larger than normal text */
 .times {
-  font-size: 1.4em;
+  font-size: 1.667em;
 }
 
 /*** grid.css from https://github.com/necolas/suit-grid ***/
@@ -245,6 +248,14 @@ body {
 /*** Small parts from https://github.com/necolas/suit-utils-dimension/ ***/
 .size1of3 {
     width: 33.333%;
+}
+
+.size1of4 {
+    width: 25%;
+}
+
+.size1of5 {
+    width: 20%;
 }
 
 .size1of6 {
