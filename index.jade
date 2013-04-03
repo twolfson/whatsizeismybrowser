@@ -3,6 +3,7 @@ html
   head
     title What size is my browser?
     meta(name="viewport",content="width=device-width")
+    link(rel='stylesheet',type='text/css',href='//fonts.googleapis.com/css?family=Noto+Sans')
     link(rel="stylesheet",type="text/css",href="index.css")
     link(rel="stylesheet",type="text/css",href="app.css")
 
@@ -72,7 +73,7 @@ html
     //- TODO: Can we short circuit the cascade via nested media queries? (e.g. @media (min-width: 1px) { content: "1"; @media (min-width: 2px) { content: "2"; } })
     //- TODO: Another perf test: Create 4000 digits for each (i.e. 0000 - 9999) and toggle each via `display: none;`. It might be faster than dynamic content (doubt it)
     //- TODO: In this case, we are intended to chain them together
-    // TODO: Choose a good looking font (modern, informative, descriptive, simple)
+    // TODO: Choose a good looking font ()
     // TODO: Can we half the size of index.css with `or` statements? (and is that performant?)
     // TODO: Can we half reduce the size of index.css with commas? (this will remove the `content: "1";` parts)
     // TODO: Favicon me

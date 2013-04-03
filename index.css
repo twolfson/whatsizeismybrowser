@@ -100,8 +100,7 @@ img {
 
 /* Fonts are modern, informative, descriptive, simple */
 html {
-  font-family: Helvetica, Arial, sans-serif;
-  /* Noto Sans */
+  font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
 }
 
 /* Default content if there is no media query support */
