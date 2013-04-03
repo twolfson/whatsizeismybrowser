@@ -115,7 +115,7 @@ body {
 
 body {
   /* Background is subtle, metric, almost invisible */
-  background: url('subtle_dots.png') repeat;
+  background: url('subtle_dots.png') repeat #FFF;
 }
 
 /* Default content if there is no media query support */
@@ -155,6 +155,31 @@ body {
 /* Push down fun fact and credits from content */
 .lead {
   margin-bottom: 40px !important;
+}
+
+/* When we are printing, hide the background and ribbon */
+@media print {
+  .github-ribbon {
+    display: none;
+  }
+
+  body {
+    background: #FFF;
+  }
+}
+
+/* When we are on a smaller screen */
+@media (max-width: 600px) {
+  /* Make the container fluid */
+  .container {
+    width: 100%;
+  }
+
+  /* Break up the author and attribution */
+  .attribution,
+  .author {
+    display: block;
+  }
 }
 
 /*** grid.css from https://github.com/necolas/suit-grid ***/

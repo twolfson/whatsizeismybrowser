@@ -57,8 +57,8 @@ html
       p <strong>Fun fact</strong>: This hands out <strong>printer dimensions</strong> in a print preview.
 
       p
-        | Inspired by <a href="http://matanich.com/test/viewport-width/">viewportSize</a> and <a href="http://www.slideshare.net/x00mario/stealing-the-pie">Stealing the Pie</a>.
-        | Written by <a href="http://twolfson.com/projects">Todd Wolfson</a>.
+        span.attribution Inspired by <a href="http://matanich.com/test/viewport-width/">viewportSize</a> and <a href="http://www.slideshare.net/x00mario/stealing-the-pie">Stealing the Pie</a>.
+        span.author Written by <a href="http://twolfson.com/projects">Todd Wolfson</a>.
 
     //- GitHub ribbon -- https://github.com/blog/273-github-ribbons
     a(href="//github.com/twolfson/whatsizeismybrowser")
@@ -69,18 +69,18 @@ html
     //- and doing things on a per-digit basis winds up forcing 9999 for the ones case alone.
     //- The tens is 999 (e.g. min-height: 10px and max-height: 20px). As a result, it is just silly.
 
+    //- TODO: File these as issues
     //- TODO: Can we short circuit the cascade via nested media queries? (e.g. @media (min-width: 1px) { content: "1"; @media (min-width: 2px) { content: "2"; } })
     //- TODO: Another perf test: Create 4000 digits for each (i.e. 0000 - 9999) and toggle each via `display: none;`. It might be faster than dynamic content (doubt it)
     //- TODO: In this case, we are intended to chain them together
-    // TODO: Choose a good looking font ()
-    // TODO: Can we half the size of index.css with `or` statements? (and is that performant?)
-    // TODO: Can we half reduce the size of index.css with commas? (this will remove the `content: "1";` parts)
-    // TODO: Favicon me
+    //- TODO: Can we half the size of index.css with `or` statements? (and is that performant?)
+    //- TODO: Can we half reduce the size of index.css with commas? (this will remove the `content: "1";` parts)
+    //- TODO: Favicon me
     //- TODO: I would love a favicon that displays browser resolution
     //- TODO: Add testing (via testling/phantomjs/casperjs) -- something that will work
+
+    //- TODO: Act on these
     //- TODO: SEO terms
-    //- TODO: Determine magical font sizings
-    //- TODO: Hide github ribbon on print preview
-    //- TODO: Need some vertical padding after values
-    //- TODO: Need some more vertical padding after hints
-    //- TODO: Hide background on print preview
+    //- TODO: Look at sizing for responsive
+    //- TODO: Deal with fork me image at small sizes
+    //- TODO: Deal with multiplication at small sizes -- might want to slide down font size
