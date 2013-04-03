@@ -153,7 +153,7 @@ body {
 
 /* Times is slightly larger than normal text */
 .times {
-  font-size: 26.667px; /* 16px * 1.667 */
+  font-size: 28.430px; /* 16px * 1.777 */
   line-height: 64px; /* Same as .value */
 }
 
