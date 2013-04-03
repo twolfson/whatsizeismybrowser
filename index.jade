@@ -42,6 +42,9 @@ html
 
   body
     .container
+      // My hack for responsive GitHub ribbons
+      a.github-text-link(href="//github.com/twolfson/whatsizeismybrowser")
+        .github-text Fork me on GitHub
       .header Your browser is
       .dimensions.grid.grid-center.lead
         .width.grid-cell.size1of4
@@ -81,6 +84,5 @@ html
 
     //- TODO: Act on these
     //- TODO: SEO terms
-    //- TODO: Look at sizing for responsive
     //- TODO: Deal with fork me image at small sizes
-    //- TODO: Deal with multiplication at small sizes -- might want to slide down font size
+    //- TODO: Move to new scaling

@@ -102,7 +102,7 @@ html {
   /* Fonts are modern, informative, descriptive, simple */
   font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
 
-  /* Font size starts at 16px and uses modular scale towards 40px -- http://modularscale.com/scale/?px1=16&px2=40&ra1=1.5&ra2=0 */
+  /* Font size starts at 16px and uses modular scale towards 40px -- http://modularscale.com/scale/?px1=16&px2=40&ra1=1.333&ra2=0 */
   font-size: 16px;
   line-height: 24px;
 }
@@ -130,6 +130,34 @@ body {
   top: 0;
   right: 0;
   border: 0;
+}
+
+/* Hide github text by default */
+.github-text {
+  display: none;
+
+  /* Set up github-text styling */
+  background: #F27500;
+  color: #FFF;
+  padding: 2px;
+  font-size: 12.669px;
+  font-weight: bold;
+
+  /* Faded orange stiching */
+  border-color: #C9AA8D;
+  border-style: dashed;
+  border-width: 1px 0;
+
+  /* Outer border */
+  outline-color: #F27500; /* Same as background */
+  outline-style: solid;
+  outline-width: 2px 0;
+  margin: 2px 0;
+}
+
+/* Remove any link styling */
+.github-text-link {
+  text-decoration: none;
 }
 
 /* Content width is 600px by default */
@@ -178,6 +206,19 @@ body {
   /* Force a line break for now in credits */
   .attribution,
   .author {
+    display: block;
+  }
+}
+
+/* When the github-ribbon starts to overlap text */
+@media (max-width: 540px) {
+  /* Hide the github-ribbon */
+  .github-ribbon {
+    display: none;
+  }
+
+  /* Show github-text */
+  .github-text {
     display: block;
   }
 }
