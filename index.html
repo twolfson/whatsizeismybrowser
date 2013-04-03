@@ -1,13 +1,4 @@
-<!DOCTYPE html><html><head><title>What size is my browser?</title><style>.w:before,
-.h:before {
-  content: "?";
-}
-.github-ribbon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: 0;
-}</style><meta name="viewport" content="width=device-width"><link rel="stylesheet" type="text/css" href="index.css"><!-- DEV: Watch files for changes--><script src="https://raw.github.com/twolfson/File-Watcher/master/src/watcher.js"></script><script src="https://raw.github.com/twolfson/Resource-Collector/master/src/collector.js"></script><script>(function () {
+<!DOCTYPE html><html><head><title>What size is my browser?</title><meta name="viewport" content="width=device-width"><link rel="stylesheet" type="text/css" href="index.css"><link rel="stylesheet" type="text/css" href="app.css"><!-- DEV: Watch files for changes--><script src="https://raw.github.com/twolfson/File-Watcher/master/src/watcher.js"></script><script src="https://raw.github.com/twolfson/Resource-Collector/master/src/collector.js"></script><script>(function () {
    var watcher = new FileWatcher(),
        resources = ResourceCollector.collect();
    watcher.addListener(function () {
@@ -18,4 +9,4 @@
   console.log('If you are looking for the source, it is all minified (except for this).')
   console.log('You are better off reading the original at http://github.com/twolfson/whatsizeismybrowser');
 }
-</script></head><body><div class="container"><span class="w">px</span><span class="times">&times;</span><span class="h">px</span></div><a href="//github.com/twolfson/whatsizeismybrowser"><img src="//s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" class="github-ribbon"></a><p><strong>Fun fact</strong>: This hands out <strong>printer dimensions</strong> in a print preview.</p><!-- TODO: Add 'Fork me on GitHub ribbon'--><!-- TODO: Center the content--><!-- TODO: Choose a good looking font (modern, informative, descriptive, simple)--><!-- TODO: Add a flavor of <hr/> and put attribution and by-line (play around with fading this line or not)--><!-- TODO: Can we half the size of index.css with `or` statements? (and is that performant?)--><!-- TODO: Can we half reduce the size of index.css with commas? (this will remove the `content: "1";` parts)--><!-- TODO: Favicon me--></body></html>
+</script></head><body><div class="container"><div class="header"><p>Your browser is</p></div><div class="dimensions"><div class="width"><div class="row"><span class="w">px</span></div><div class="row">(width)</div></div><div class="times">&times;</div><div class="height"><div class="row"><span class="h">px</span></div><div class="row">(height)</div></div></div><p><strong>Fun fact</strong>: This hands out <strong>printer dimensions</strong> in a print preview.</p></div><a href="//github.com/twolfson/whatsizeismybrowser"><img src="//s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" class="github-ribbon"></a><!-- TODO: Choose a good looking font (modern, informative, descriptive, simple)--><!-- TODO: Can we half the size of index.css with `or` statements? (and is that performant?)--><!-- TODO: Can we half reduce the size of index.css with commas? (this will remove the `content: "1";` parts)--><!-- TODO: Favicon me--></body></html>

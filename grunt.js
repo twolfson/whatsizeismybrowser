@@ -32,8 +32,8 @@ module.exports = function(grunt) {
       // Sorry for the EJS, it is just easier for CSS
       // and SCSS was being too slow
       css: {
-        src: 'index.ejs.css',
-        dest: 'index.tmp.css',
+        src: 'app.ejs.css',
+        dest: 'app.tmp.css',
         engine: 'ejs',
         variables: {}
       }
@@ -42,8 +42,8 @@ module.exports = function(grunt) {
     // Strip out all whitespace
     replace: {
       css: {
-        src: 'index.tmp.css',
-        dest: 'index.css',
+        src: 'app.tmp.css',
+        dest: 'app.css',
         replacements: [{
           from: /\s+/g,
           to: ''
